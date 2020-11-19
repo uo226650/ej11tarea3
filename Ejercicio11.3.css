@@ -1,0 +1,19 @@
+#datos{
+    display: flex;
+    margin: 2em;
+}
+
+#ubicacion{
+    margin: 1em;
+}
+#map{
+    height: 100%;
+}
+
+footer{
+    margin-top:2em;
+}
+footer a img{
+    height:31px; 
+    width:88px;
+}
