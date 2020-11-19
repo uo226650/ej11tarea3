@@ -60,8 +60,8 @@ class MapaEstaticoGoogle {
     getMapaEstaticoGoogle(dondeVerlo){
         var ubicacion=document.getElementById(dondeVerlo);
         
-        //var apiKey = "&key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU"; //API key profe
-        var apiKey = "AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g";
+        var apiKey = "&key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU"; //API key profe
+        //var apiKey = "AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g";
         //URL: obligatoriamente https
         var url = "https://maps.googleapis.com/maps/api/staticmap?";
         //Parámetros
