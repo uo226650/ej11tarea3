@@ -1,7 +1,6 @@
 // Tarea 3: Mostrar un mapa estático en Google Maps con un marcador con la posición del usuario
 // Se muestra en Firefox, Opera, Safari
 // Muesta 'undefined' en los campos, en Chrome y Edge
-// AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g (miKey) no needed
 
 class MapaEstaticoGoogle {
     constructor (){
@@ -60,33 +59,17 @@ class MapaEstaticoGoogle {
     getMapaEstaticoGoogle(dondeVerlo){
         var ubicacion=document.getElementById(dondeVerlo);
         
-        var apiKey = "&key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU"; //API key profe
-        //var apiKey = "AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g";
-        //URL: obligatoriamente https
+        var apiKey = "&key=AIzaSyC8aUp4J8B-MOmk6mg4A8cSsbE3qzEpB1g";
         var url = "https://maps.googleapis.com/maps/api/staticmap?";
-        //Parámetros
-        // centro del mapa (obligatorio si no hay marcadores)
         var centro = "center=" + this.latitud + "," + this.longitud;
-        debugger;
-        //zoom (obligatorio si no hay marcadores)
-        //zoom: 1 (el mundo), 5 (continentes), 10 (ciudad), 15 (calles), 20 (edificios)
         var zoom ="&zoom=15";
-        //Tamaño del mapa en pixeles (obligatorio)
         var tamaño= "&size=800x600";
-        //Escala (opcional)
-        //Formato (opcional): PNG,JPEG,GIF
-        //Tipo de mapa (opcional)
-        //Idioma (opcional)
-        //region (opcional)
-        //marcadores (opcional)
-        var marcador = "&markers=color:red%7Clabel:S%7C" + this.latitud + "," + this.longitud;
-        //rutas. path (opcional)
-        //visible (optional)
-        //style (opcional)
+        var marcador = "&markers=color:white%7Clabel:A%7C" + this.latitud + "," + this.longitud;
         var sensor = "&sensor=false"; 
+        var tipoMapa = "&maptype=hybrid"
         
-        this.imagenMapa = url + centro + zoom + tamaño + marcador + sensor + apiKey;
-        ubicacion.innerHTML = "<img src='"+this.imagenMapa+"'/>";
+        this.imagenMapa = url + centro + zoom + tamaño + marcador + sensor + apiKey + tipoMapa;
+        ubicacion.innerHTML = "<img src='"+this.imagenMapa+"' alt='mapa estático de google' />";
     }
 
     presentarDatos(espacioTexto, espacioImagen){
