@@ -1,6 +1,5 @@
 // Tarea 3: Mostrar un mapa estático en Google Maps con un marcador con la posición del usuario
-// Se muestra en Firefox, Opera, Safari
-// Muesta 'undefined' en los campos, en Chrome y Edge
+// Asegurarse de que las preferencias del sistema dan permisos de ubicación
 
 class MapaEstaticoGoogle {
     constructor (){
